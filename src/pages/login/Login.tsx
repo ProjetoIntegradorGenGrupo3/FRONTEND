@@ -1,8 +1,10 @@
+import {  useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 import './Login.css';
 
 function Login() {
-    // let navigate = useNavigate();
+     let navigate = useNavigate();
 
     
     // const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>(
@@ -13,11 +15,11 @@ function Login() {
 
     // const { isLoading } = useContext(AuthContext)
 
-    // useEffect(() => {
-    //     if (usuario.token !== "") {
-    //         navigate('/home')
-    //     }
-    // }, [usuario])
+     useEffect(() => {
+        
+             navigate('/')
+         
+     }, )
 
     // function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
     //     setUsuarioLogin({
@@ -74,10 +76,10 @@ function Login() {
                     <hr className="border-slate-800 w-full" />
 
                     <p>
-                        {/* Ainda não tem uma conta?{' '}
+                         Ainda não tem uma conta?{' '}
                         <Link to="/cadastro" className="text-indigo-800 hover:underline">
                             Cadastre-se
-                        </Link> */}
+                        </Link> 
                     </p>
                 </form>
                 <div className="fundoLogin hidden lg:block"></div>
