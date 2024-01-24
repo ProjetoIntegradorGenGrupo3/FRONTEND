@@ -20,15 +20,15 @@ function Navbar() {
         <>
             <div className='w-full bg-green-900 text-white flex justify-center py-4'>
                 <div className="container flex justify-between text-lg">
-                    <Link to='/home' className='text-2xl font-bold uppercase'>ECOMUNIDADE</Link>
+                    <Link to='/' className='text-2xl font-bold uppercase'>ECOMUNIDADE</Link>
 
                     <div className='flex gap-4'>
                         <div className='hover:underline'>Postagens</div>
-                        <Link to='/login' className='hover:underline'>Login</Link>
+            
                         <Link to='/sobre' className='hover:underline'>Sobre</Link>
-                        <Link to='/cadastro' className='houver:underline'>Cadastrar</Link>
+
                         <div className='hover:underline'>Perfil</div>
-                        <Link to='' onClick={logout} className='hover:underline'>Sair</Link>
+                        <Link to='/' onClick={logout} className='hover:underline'>Sair</Link>
                     </div>
                 </div>
             </div>
