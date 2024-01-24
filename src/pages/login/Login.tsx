@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 
-import { UserContext } from '../../contexts/UserContext'
+import { AuthContext } from '../../contexts/AuthContext'
 import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
-  const { nome, setNome } = useContext(UserContext);
   let navigate = useNavigate()
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -24,8 +23,6 @@ function Login() {
             name="usuario"
             placeholder="Usuario"
             className="border-2 border-slate-700 rounded p-2"
-            value={nome}
-            onChange={(event) => setNome(event.target.value)}
           />
         </div>
         <button type='submit' className="my-4 rounded bg-indigo-400
