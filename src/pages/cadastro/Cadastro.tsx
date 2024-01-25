@@ -83,18 +83,18 @@ function Cadastro() {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
-        <div className="fundoCadastro hidden lg:block"></div>
-        <form className='flex justify-center items-center flex-col w-2/3 gap-3'onSubmit={cadastrarNovoUsuario}>
-          <h2 className='text-slate-900 text-5xl'>Cadastrar</h2>
-          <div className="flex flex-col w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 h-screen  place-items-center font-semibold "style={{ fontFamily: 'Quicksand' }}>
+        <div className="fundoCadastro hidden lg:block "></div>
+        <form className='flex justify-center items-center flex-col w-2/3 gap-3 mx-auto max-w-screen-2xl px-4 md:px-8'onSubmit={cadastrarNovoUsuario}>
+          <h2 className='text-marrom text-5xl'style={{ fontFamily: 'Comfortaa' }}>Cadastrar</h2>
+          <div className="flex flex-col w-full  ">
             <label htmlFor="nome">Nome</label>
             <input
               type="text"
               id="nome"
               name="nome"
               placeholder="Nome"
-              className="border-2 border-slate-700 rounded p-2"
+              className="rounded border border-solid p-2 border-marrom "
               value={usuario.nome}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
 
@@ -108,7 +108,7 @@ function Cadastro() {
               id="email"
               name="email"
               placeholder="Email"
-              className="border-2 border-slate-700 rounded p-2"
+              className="rounded border border-solid p-2 border-marrom "
               value={usuario.email}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
@@ -120,7 +120,7 @@ function Cadastro() {
               id="foto"
               name="foto"
               placeholder="Foto"
-              className="border-2 border-slate-700 rounded p-2"
+              className="rounded border border-solid p-2 border-marrom "
               value={usuario.foto}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
@@ -132,7 +132,7 @@ function Cadastro() {
               id="senha"
               name="senha"
               placeholder="Senha"
-              className="border-2 border-slate-700 rounded p-2"
+              className="rounded border border-solid p-2 border-marrom "
               value={usuario.senha}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
@@ -144,7 +144,7 @@ function Cadastro() {
               id="confirmarSenha"
               name="confirmarSenha"
               placeholder="Confirmar Senha"
-              className="border-2 border-slate-700 rounded p-2"
+              className="rounded border border-solid p-2 border-marrom "
               value={confirmaSenha}
               onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}
             />
@@ -157,7 +157,7 @@ function Cadastro() {
               id="contato"
               name="contato"
               placeholder="Outras redes Sociais"
-              className="border-2 border-slate-700 rounded p-2"
+              className="rounded border border-solid p-2 border-marrom "
               value={usuario.contato}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
@@ -169,7 +169,7 @@ function Cadastro() {
               id="data_nascimento"
               name="data_nascimento"
               placeholder="data_nascimento"
-              className="border-2 border-slate-700 rounded p-2"
+              className="rounded border border-solid p-2 border-marrom "
               value={usuario.data_nascimento}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
@@ -178,21 +178,20 @@ function Cadastro() {
           <div className="flex flex-col w-full">
             <label htmlFor="bio">Bio</label>
             <input
-              type="textarea"
-              
+              type="textarea" 
               id="bio"
               name="bio"
               placeholder="Insira uma breve Biografia"
-              className="border-2 border-slate-700 rounded p-12"
+              className="rounded border border-solid p-2 border-marrom"
               value={usuario.bio}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
           <div className="flex justify-around w-full gap-8">
-            <button className='rounded text-white bg-red-400 hover:bg-red-700 w-1/2 py-2' onClick={back}>
+            <button className='rounded text-ocre bg-marrom hover:bg-verdeEscuro w-1/2 py-2' onClick={back}>
               Cancelar
             </button>
-            <button type='submit' className="rounded bg-indigo-400 hover:bg-indigo-900 text-white w-1/2 py-2 flex justify-center">
+            <button type='submit' className="rounded text-ocre bg-marrom hover:bg-verdeEscuro w-1/2 py-2 flex justify-center">
                         {isLoading ? <RotatingLines
                             strokeColor="white"
                             strokeWidth="5"

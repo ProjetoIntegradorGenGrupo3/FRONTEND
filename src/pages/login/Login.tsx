@@ -46,10 +46,10 @@ function Login() {
         <>
             <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold ">
 
-                <form className="flex justify-center items-center flex-col w-1/2 gap-4"
+                <form className="flex justify-center items-center flex-col w-1/2 gap-4 text-marrom"style={{ fontFamily: 'Comfortaa' }}
                     onSubmit={login}    // onSubmit é o evento que dispara a função de login quando o usuário clica em Entrar
                 >
-                    <h2 className="text-slate-900 text-5xl ">Entrar</h2>
+                    <h2 className=" text-5xl font-extrabold"style={{ fontFamily: 'Comfortaa' }}>Olá novamente!</h2>
                     <div className="flex flex-col w-full">
                         <label htmlFor="email">Email</label>
                         <input
@@ -57,7 +57,7 @@ function Login() {
                             id="email"
                             name="email"
                             placeholder="Email"
-                            className="border-2 border-slate-700 rounded p-2"
+                            className="border-2 border-marromEscuro rounded p-2"
                             value={usuarioLogin.email}                                        // Conecta esse input com o atributo usuario(email) do estado/objeto usuario
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)} // Quando o usuario digitar algo, chama a função atualizarEstado
                         />
@@ -69,12 +69,12 @@ function Login() {
                             id="senha"
                             name="senha"
                             placeholder="Senha"
-                            className="border-2 border-slate-700 rounded p-2"
+                            className="border-2 border-marromEscuro rounded p-2"
                             value={usuarioLogin.senha}                                          // Conecta esse input com o atributo senha do estado/objeto usuario
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)} // Quando o usuario digitar algo, chama a função atualizarEstado
                         />
                     </div>
-                    <button type='submit' className="rounded bg-indigo-400 hover:bg-indigo-900 text-white w-1/2 py-2 flex justify-center">
+                    <button type='submit' className="rounded bg-verdeEscuro text-ocre hover:bg-marrom w-1/2 py-2 flex justify-center">
                         {
                             // Renderização Condicial - Se isLoading for true mostra o componente de carregamento
                             isLoading ? <RotatingLines
@@ -91,7 +91,7 @@ function Login() {
 
                     <p>
                         Ainda não tem uma conta?{' '}
-                        <Link to="/cadastro" className="text-indigo-800 hover:underline">
+                        <Link to="/cadastro" className="text-verdeEscuro hover:underline">
                             Cadastre-se
                         </Link>
                     </p>
