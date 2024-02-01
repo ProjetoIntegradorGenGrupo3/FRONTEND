@@ -1,4 +1,4 @@
-export default interface Tema {
+export default interface Tipo {
     id: number;
     nome: string;
     descricao: string;

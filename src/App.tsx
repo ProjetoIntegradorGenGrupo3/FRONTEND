@@ -1,12 +1,11 @@
 
 import Home from "./pages/home/home"
 import Login from "./pages/login/Login"
-import {AuthProvider} from './contexts/AuthContext';
+import { AuthProvider } from './contexts/AuthContext';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Sobre from "./pages/sobre/sobre"
 import Cadastro from "./pages/cadastro/Cadastro";
-import ListaPostagens from "./components/postagens/listaPostagem/ListaPostagem";
 import Navbar from "./components/NavBar/navBar";
 import Footer from "./components/Footer/footer";
 
@@ -24,7 +23,6 @@ const App = () => {
             <Route path="/cadastro" element={<Cadastro />} />
             <Route path='/home' element={<Home />} />
             <Route path='/sobre' element={<Sobre />} />
-            <Route path="/postagens" element={<ListaPostagens />} />
           </Routes>
         </div>
         <Footer />

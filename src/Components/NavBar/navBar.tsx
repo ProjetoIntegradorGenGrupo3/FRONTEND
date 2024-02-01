@@ -1,27 +1,26 @@
-import { useContext } from "react"
-import { Link, useNavigate } from "react-router-dom"
-// import { AuthContext } from "../../contexts/AuthContext"
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 
 function Navbar() {
-    // Criamos uma constante que recebe o hook useNavigate, para podermos redirecionar o usuário
-    const navigate = useNavigate()
+  const navigate = useNavigate();
 
-    // Pega as informações que queremos do nosso Contexto através do hook useContexo
-    // const { handleLogout } = useContext(AuthContext)
+  const { usuario, handleLogout } = useContext(AuthContext);
 
-    // Função que vai ser chamada ao clique da opção SAIR, que por sua vez, chama a função handleLogout do Contexto
-    function logout() {
-        // handleLogout()
-        alert('Usuário deslogado com sucesso')
-        navigate('/login')
-    }
+  function logout() {
+    handleLogout();
+    alert("Usuário deslogado com sucesso");
+    navigate("/login");
+  }
+  let navbarComponent
 
-    return (
-        <>
-            <div className='w-full bg-green-900 text-white flex justify-center py-4'>
-                <div className="container flex justify-between text-lg">
-                    <Link to='/' className='text-2xl font-bold uppercase'>ECOMUNIDADE</Link>
+  if (usuario.token !== "") {
+    navbarComponent = (
+        <div className='w-full bg-green-900 text-white flex justify-center py-4'>
+            <div className="container flex justify-between text-lg">
+                <Link to='/' className='text-2xl font-bold uppercase'>Ecomunidade</Link>
 
+<<<<<<< HEAD
                     <div className='flex gap-4'>
                         <Link to='/postagens' className='hover:underline'>Postagens</Link>
             
@@ -30,10 +29,24 @@ function Navbar() {
                         <div className='hover:underline'>Perfil</div>
                         <Link to='/' onClick={logout} className='hover:underline'>Sair</Link>
                     </div>
+=======
+                <div className='flex gap-4'>
+                    <Link to='/tipos'>Tipos</Link>
+                    <Link to='/cadastroTipo'>Cadastrar tipo</Link>
+                    <Link to='/sobre' className='hover:underline'>Sobre</Link>
+                    <Link to='/' onClick={logout}>Sair</Link>
+>>>>>>> 2877a3f8584a161ad0840f53be105cb551229727
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
-export default Navbar
+return (
+    <>
+        {navbarComponent}
+    </>
+)
+}
+
+export default Navbar;
