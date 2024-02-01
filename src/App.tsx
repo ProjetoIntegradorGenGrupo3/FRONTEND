@@ -9,6 +9,7 @@ import Sobre from "./pages/sobre/sobre"
 import Cadastro from "./pages/cadastro/Cadastro";
 import FormularioTipo from "./Components/tipo/formularioTipo/FormularioTipo";
 import DeletarTipo from "./Components/tipo/deletarTipo/DeletarTipo";
+import ListaTipo from "./Components/tipo/listaTipo/ListaTipo";
 
 
 const App = () => {
@@ -27,7 +28,7 @@ const App = () => {
             <Route path="/cadastroTipo" element={<FormularioTipo />} />
             <Route path="/editarTipo/:id" element={<FormularioTipo />} />
             <Route path="/deletarTipo/:id" element={<DeletarTipo />} />
-            {/* <Route path="/deletarTipos" element={<ListaTipo />} /> */}
+           <Route path="/tipos" element={<ListaTipo />} /> 
             
           </Routes>
         </div>
