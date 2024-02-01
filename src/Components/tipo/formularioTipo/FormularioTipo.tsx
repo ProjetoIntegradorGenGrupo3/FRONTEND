@@ -8,53 +8,53 @@ import { RotatingLines } from 'react-loader-spinner';
 
 function FormularioTipo() {
 
-   
+
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
- 
-    const [tipo, setTipo] = useState<Tipo>({} as Tipo)  
-    
+
+    const [tipo, setTipo] = useState<Tipo>({} as Tipo)
+
     const navigate = useNavigate();
 
-   
-    const { id } = useParams<{ id: string }>()  
 
-    
+    const { id } = useParams<{ id: string }>()
+
+
     const { usuario, handleLogout } = useContext(AuthContext)
-    const token = usuario.token;   
+    const token = usuario.token;
 
-    
+
     async function buscarPorId(id: string) {
 
-        await buscar(`/tipos/${id}`, setTipo, { 
+        await buscar(`/tipos/${id}`, setTipo, {
             headers: {
-                Authorization: token,   
+                Authorization: token,
             },
         });
     }
 
-    
+
     useEffect(() => {
         if (id !== undefined) {
-            buscarPorId(id) 
+            buscarPorId(id)
         }
     }, [id])
 
-   
+
     function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
 
-        setTipo({       
-            ...tipo,    
+        setTipo({
+            ...tipo,
             [e.target.name]: e.target.value
         })
     }
 
-    
-    async function gerarNovoTipo(e: ChangeEvent<HTMLFormElement>) {
-        e.preventDefault()  
-        setIsLoading(true)  
 
-        if (id !== undefined) { 
+    async function gerarNovoTipo(e: ChangeEvent<HTMLFormElement>) {
+        e.preventDefault()
+        setIsLoading(true)
+
+        if (id !== undefined) {
 
             try {
                 await atualizar(`/tipos`, tipo, setTipo, {
@@ -75,7 +75,7 @@ function FormularioTipo() {
                 }
             }
 
-        } else {   
+        } else {
 
             try {
                 await cadastrar(`/tipos`, tipo, setTipo, {
@@ -96,7 +96,7 @@ function FormularioTipo() {
             }
         }
 
-        setIsLoading(false) 
+        setIsLoading(false)
         retornar()
     }
 
@@ -115,46 +115,35 @@ function FormularioTipo() {
         <div className="container flex flex-col items-center justify-center mx-auto">
             <h1 className="text-4xl text-center my-8">
 
-            
+
                 {id === undefined ? 'Cadastre um novo tipo' : 'Editar tipo'}
             </h1>
 
-            
+
             <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovoTipo}>
-            <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2">
                     <label htmlFor="nome">Nome do tipo</label>
                     <input
                         type="text"
                         placeholder="Nome"
                         name='nome'
                         className="border-2 border-slate-700 rounded p-2"
-                        value={tipo.nome}                                                  
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}     
+                        value={tipo.nome}
+                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="descricao">Descrição tipo</label>
-                    <input
-                        type="text"
-                        placeholder="Descrição"
-                        name='descricao'
-                        className="border-2 border-slate-700 rounded p-2"
-                        value={tipo.descricao}                                                  
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}     
-                    />
+                    <div className="flex flex-col gap-2">
+                        <label htmlFor="descricao">Descrição tipo</label>
+                        <input
+                            type="text"
+                            placeholder="Descrição"
+                            name='descricao'
+                            className="border-2 border-slate-700 rounded p-2"
+                            value={tipo.descricao}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+                        />
+                    </div>
+
                 </div>
-               
-                </div>
-                {/* <div className="flex flex-col gap-2">
-                    <label htmlFor="data">Cadastro do tipo</label>
-                    <input
-                        type="date"
-                        placeholder="Data"
-                        name='data'
-                        className="border-2 border-slate-700 rounded p-2"
-                        value={tipo.data}                                                 
-                        onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}     
-                    />
-                </div> */}
                 <button
                     className="rounded text-slate-100 bg-indigo-400 hover:bg-indigo-800 w-1/2 py-2 mx-auto flex justify-center "
                     type="submit"
