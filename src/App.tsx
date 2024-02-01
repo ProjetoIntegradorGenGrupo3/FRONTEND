@@ -7,7 +7,8 @@ import { AuthProvider } from './contexts/AuthContext';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Sobre from "./pages/sobre/sobre"
 import Cadastro from "./pages/cadastro/Cadastro";
-import FormularioTipo from "./Components/tipo/FormularioTipo";
+import FormularioTipo from "./Components/tipo/formularioTipo/FormularioTipo";
+import DeletarTipo from "./Components/tipo/deletarTipo/DeletarTipo";
 
 
 const App = () => {
@@ -24,7 +25,10 @@ const App = () => {
             <Route path='/home' element={<Home />} />
             <Route path='/sobre' element={<Sobre />} />
             <Route path="/cadastroTipo" element={<FormularioTipo />} />
-            <Route path="/editarTtipo/:id" element={<FormularioTipo />} />
+            <Route path="/editarTipo/:id" element={<FormularioTipo />} />
+            <Route path="/deletarTipo/:id" element={<DeletarTipo />} />
+            {/* <Route path="/deletarTipos" element={<ListaTipo />} /> */}
+            
           </Routes>
         </div>
         <Footer />
