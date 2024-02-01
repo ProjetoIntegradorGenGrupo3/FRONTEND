@@ -23,7 +23,7 @@ function Navbar() {
                     <Link to='/' className='text-2xl font-bold uppercase'>ECOMUNIDADE</Link>
 
                     <div className='flex gap-4'>
-                        <div className='hover:underline'>Postagens</div>
+                        <Link to='/postagens' className='hover:underline'>Postagens</Link>
             
                         <Link to='/sobre' className='hover:underline'>Sobre</Link>
 
