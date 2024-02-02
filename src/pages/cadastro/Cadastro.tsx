@@ -119,7 +119,7 @@ function Cadastro() {
               type="text"
               id="foto"
               name="foto"
-              placeholder="Foto"
+              placeholder="Digite o link de sua Foto"
               className="border-2 border-slate-700 rounded p-2"
               value={usuario.foto}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
@@ -156,7 +156,7 @@ function Cadastro() {
               type="text"
               id="contato"
               name="contato"
-              placeholder="Outras redes Sociais"
+              placeholder="Link de Outras redes Sociais"
               className="border-2 border-slate-700 rounded p-2"
               value={usuario.contato}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}

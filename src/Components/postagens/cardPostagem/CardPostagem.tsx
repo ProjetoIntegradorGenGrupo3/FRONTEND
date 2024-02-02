@@ -31,6 +31,7 @@ function CardPostagem({ post }: CardPostagemProps) {
                     <h4 className='text-lg font-semibold uppercase'>{post.localidade}</h4> 
                     <p>{post.conteudo}</p>
                     <p>Tema: {post.tipo?.descricao}</p>
+                    <img src={post.foto} className='h-12 rounded-full' alt="" /> 
                     <p>Data: {dataLocal}</p>
                 </div>
             </div>
