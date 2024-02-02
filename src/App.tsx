@@ -23,7 +23,7 @@ const App = () => {
     <AuthProvider>
 
       <BrowserRouter>
-        <div className='min-h-[80vh]'>
+        <div className='min-h-[100vh]'>
           <Navbar />
           <Routes>
             <Route path='/' element={<Login />} />
