@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import homeLogo from '../../assets/Login.svg'
 import './Home.css';
-import ListaPostagens from '../../components/postagens/listaPostagem/ListaPostagem';
-import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
+import ListaPostagens from '../../Components/postagens/listaPostagem/ListaPostagem';
+import ModalPostagem from '../../Components/postagens/modalPostagem/ModalPostagem';
 
 
 
@@ -17,7 +17,7 @@ function Home() {
 
             <div className="flex justify-around gap-4">
               <ModalPostagem />   {/* Colocamos o Componente ModalPostagem aqui, pois ele irá abrir o Modal com o Formulário */}
-              <button className='rounded bg-white text-blue-800 py-2 px-4'>
+              <button className='rounded bg-white text-green-800 py-2 px-4'>
                 <Link to="/postagens">Ver Postagens</Link>
               </button>
             </div>
