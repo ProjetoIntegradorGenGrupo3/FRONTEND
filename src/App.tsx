@@ -15,6 +15,7 @@ import ListaPostagens from "./Components/postagens/listaPostagem/ListaPostagem";
 import FormularioPostagem from "./Components/postagens/formularioPostagem/FormularioPostagem";
 import DeletarPostagem from "./Components/postagens/deletarPostagem/DeletarPostagem";
 import Footer from "./Components/Footer/footer";
+import Sidebar from "./Components/sideBar/SideBar";
 
 
 
@@ -23,8 +24,8 @@ const App = () => {
     <AuthProvider>
 
       <BrowserRouter>
-        <div className='min-h-[80vh]'>
-          <Navbar />
+          <Sidebar />
+          <div className='min-h-[100vh]'>
           <Routes>
             <Route path='/' element={<Login />} />
             <Route path='/login' element={<Login />} />

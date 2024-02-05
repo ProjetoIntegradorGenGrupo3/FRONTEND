@@ -33,6 +33,7 @@ function Navbar() {
     }
 
     return (
+        
         <>
             {navbarComponent}
         </>
