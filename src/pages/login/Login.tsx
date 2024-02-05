@@ -31,7 +31,7 @@ function Login() {
 
     return (
         <div className="fundoLogin">
-            <div className="formContainer">
+            <div className="formContainer shadow-2xl">
                 <form onSubmit={login}>
                     <h2 className="text-5xl mb-4">Entrar</h2>
                     <div className="flex flex-col w-full">

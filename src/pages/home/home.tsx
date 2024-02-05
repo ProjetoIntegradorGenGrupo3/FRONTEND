@@ -9,15 +9,15 @@ import ModalPostagem from '../../Components/postagens/modalPostagem/ModalPostage
 function Home() {
   return (
     <>
-      <div className="bg-green-900 flex justify-center">
-        <div className='container grid grid-cols-2 text-white'>
+      <div className="bg-escuro flex justify-center">
+        <div className='container grid grid-cols-2 text-claro'>
           <div className="flex flex-col gap-4 items-center justify-center py-4">
-            <h2 className='text-5xl font-bold'>Seja bem vinde!</h2>
-            <p className='text-xl'>Expresse aqui seus pensamentos e opniões</p>
+            <h2 className='text-5xl font-bold'>Seja bem vindo(a)!</h2>
+            <p className='text-xl'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi eos vero ad temporibus consequuntur quae veniam, aperiam provident accusantium sit tempore eum id tenetur aspernatur ducimus? Natus fugiat repellendus dolor!</p>
 
             <div className="flex justify-around gap-4">
-              <ModalPostagem />   {/* Colocamos o Componente ModalPostagem aqui, pois ele irá abrir o Modal com o Formulário */}
-              <button className='rounded bg-white text-green-800 py-2 px-4'>
+              <ModalPostagem /> 
+              <button className='rounded px-4 bg-white hover:bg-azmedio hover:text-white py-2 px-4'>
                 <Link to="/postagens">Ver Postagens</Link>
               </button>
             </div>
