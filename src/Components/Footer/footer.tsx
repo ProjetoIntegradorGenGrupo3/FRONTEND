@@ -1,4 +1,4 @@
-import { FacebookLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react'
+import { FacebookLogo, GithubLogo, InstagramLogo, LinkedinLogo } from '@phosphor-icons/react'
 import React, { useContext } from 'react'
 import { AuthContext } from '../../contexts/AuthContext'
 
@@ -15,12 +15,12 @@ function Footer() {
       <>
         <div className="flex justify-center bg-azmedio text-claro">
                 <div className="container flex flex-col items-center py-4">
-                    <p className='text-xl font-bold'>Ecomunidade </p>
-                    <p className='text-lg'>Acesse nossas redes sociais</p>
+                    <p className='text-xl font-bold'>Ecomunidade | Copyright: 2024 </p>
+                    <p className='text-lg'>Acesse nossa organização no Github:</p>
                     <div className='flex gap-2'>
-                        <LinkedinLogo size={48} weight='bold' />
-                        <InstagramLogo size={48} weight='bold' />
-                        <FacebookLogo size={48} weight='bold' />
+                      <a href='https://github.com/ProjetoIntegradorGenGrupo3' target='_blank'>
+                      <GithubLogo size={48} weight='bold' />
+                      </a>
                     </div>
                 </div>
             </div>
