@@ -3,7 +3,7 @@ import homeLogo from '../../assets/Sobre.svg'
 function Sobre() {
     return (
         <>
-            <div className="bg-green-900 flex justify-center h-screen">
+            <div className="flex justify-center h-screen">
                 <div className='container grid grid-cols-2 text-white'>
                     <div className="flex flex-col gap-4 items-center justify-center py-4">
                         <h2 className='text-5xl font-bold'>Saiba um pouco mais sobre nós!</h2>
