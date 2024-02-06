@@ -21,18 +21,17 @@ function Sidebar() {
     <>
       {usuario.token !== "" && (
         <div
-          className={`sidebar fixed top-0 left-0 h-screen ${
-            isSidebarExtended ? "w-62 show" : "w-10"
-          } bg-azmedio text-escuro`}
+          className={`sidebar fixed top-0 left-0 h-screen border rounded-lg border-azmedio ${
+            isSidebarExtended ? "w-61 show" : "w-10"
+          } bg-azmedio text-claro`}
         >
           <div className="flex flex-col h-full">
-            {/* Botão de Toggle */}
             <button
-              className="navbar-toggle-button"
+              className="navbar-toggle-button text-left  "
               onClick={() => setIsSidebarExtended(!isSidebarExtended)}
             >
               {isSidebarExtended ? (
-                <span className="text-lg font-semibold">Reduzir Menu</span>
+                <span className="text-lg mx-6 my-5  hover:underline"> Voltar</span>
               ) : (
                 <img
                   src={rightArrowIcon}
@@ -42,9 +41,8 @@ function Sidebar() {
               )}
             </button>
 
-            {/* Conteúdo da Sidebar (oculto quando fechado) */}
             <div
-              className={`flex-1 flex flex-col gap-4 overflow-y-auto p-4 border-t border-escuro ${
+              className={`flex-1 flex flex-col gap-4 overflow-y-auto p-4 border-t border-claro ${
                 isSidebarExtended ? "" : "hidden"
               }`}
             >
@@ -69,7 +67,7 @@ function Sidebar() {
               </Link>
             </div>
 
-            {/* Link de Sair (sempre visível) */}
+            
             <Link
               to="/"
               onClick={logout}
