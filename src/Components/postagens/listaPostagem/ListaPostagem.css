@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* Ajuste a altura conforme necessário */
+    width: 50px;
   }
   
   .lista-postagens-loading {

@@ -22,13 +22,13 @@ function CardPostagem({ post }: CardPostagemProps) {
 
     return (
    
-            <div className='border-claro shadow-xl border flex-col rounded overflow-hidden w-1/2 text-claro '>
-                <div className='bg-white'>
+            <div className='border-claro shadow-xl border flex-col rounded overflow-hidden w-3/3 text-claro '>
+                <div className='bg-white  shadow-inner'>
                     <div className="flex w-full bg-azmedio py-1 px-4 items-center gap-4">
                         <img src={post.usuario?.foto} className='h-12 rounded-full' alt="" />   
                         <h3 className='text-lg font-bold text-center uppercase '>{post.usuario?.nome}</h3>
                     </div>
-                    <div className='p-4 '>
+                    <div className='p-4 text-black '>
                         <h4 className='text-lg font-semibold uppercase'>{post.localidade}</h4> 
                         <p>{post.conteudo}</p>
                         <p>Tema: {post.tipo?.descricao}</p>
