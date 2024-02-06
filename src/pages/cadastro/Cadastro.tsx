@@ -60,6 +60,12 @@ function Cadastro() {
       [e.target.name]: e.target.value
     })
   }
+  function atualizarEstadoBio(e: ChangeEvent<HTMLTextAreaElement> ) {
+    setUsuario({
+      ...usuario,
+      [e.target.name]: e.target.value
+    })
+  }
 
   async function cadastrarNovoUsuario(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -177,15 +183,13 @@ function Cadastro() {
           </div>
           <div className="flex flex-col w-full">
             <label htmlFor="bio">Bio</label>
-            <input
-              type="textarea"
-              
+            <textarea
               id="bio"
               name="bio"
               placeholder="Insira uma breve Biografia"
-              className="border-2 border-slate-700 rounded p-12"
+              className="border-2 border-slate-700 rounded h-32"
               value={usuario.bio}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+              onChange={(e: ChangeEvent<HTMLTextAreaElement>) => atualizarEstadoBio(e)}
             />
           </div>
           <div className="flex justify-around w-full gap-8">
