@@ -21,7 +21,7 @@ function Sidebar() {
     <>
       {usuario.token !== "" && (
         <div
-          className={`sidebar fixed top-0 left-0 h-screen border rounded-lg border-azmedio ${
+          className={` shadow-2xl sidebar fixed top-0 left-0 h-screen border rounded-lg border-azmedio ${
             isSidebarExtended ? "w-61 show" : "w-10"
           } bg-azmedio text-claro`}
         >
