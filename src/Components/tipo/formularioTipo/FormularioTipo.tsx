@@ -5,6 +5,7 @@ import { atualizar, buscar, cadastrar } from '../../../service/Service'
 // import { toastAlerta } from '../../../util/toastAlerta';
 import Tipo from '../../../models/Tipo';
 import { RotatingLines } from 'react-loader-spinner';
+import { toastAlerta } from '../../../util/toastAlerta';
 
 function FormularioTipo() {
 
@@ -63,15 +64,15 @@ function FormularioTipo() {
                     }
                 })
 
-                alert('Tipo atualizado com sucesso')
+                toastAlerta('Tipo atualizado com sucesso', 'sucesso')
                 retornar()
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
-                    alert('O token expirou, favor logar novamente')
+                    toastAlerta('O token expirou, favor logar novamente', 'erro')
                     handleLogout()
                 } else {
-                    alert('Erro ao atualizar o Tipo')
+                    toastAlerta('Erro ao atualizar o Tipo', 'erro')
                 }
             }
 
@@ -84,14 +85,14 @@ function FormularioTipo() {
                     }
                 })
 
-                alert('Tipo cadastrado com sucesso')
+                toastAlerta('Tipo cadastrado com sucesso', 'sucesso')
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
-                    alert('O token expirou, favor logar novamente')
+                    toastAlerta('O token expirou, favor logar novamente', 'erro')
                     handleLogout()
                 } else {
-                    alert('Erro ao cadastrado o Tema')
+                    toastAlerta('Erro ao cadastrado o Tema', 'erro')
                 }
             }
         }
@@ -106,7 +107,7 @@ function FormularioTipo() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado');
+            toastAlerta('Você precisa estar logado', 'info');
             navigate('/login')
         }
     }, [token])
