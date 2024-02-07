@@ -4,6 +4,7 @@ import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import "./SideBar.css";
+import { toastAlerta } from "../../util/toastAlerta";
 
 function Sidebar() {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ function Sidebar() {
 
   function logout() {
     handleLogout();
-    alert("Usuário deslogado com sucesso");
+    toastAlerta("Usuário deslogado com sucesso",'sucesso');
     navigate("/login");
   }
 
@@ -56,10 +57,10 @@ function Sidebar() {
                 Postagens
               </Link>
               <Link to="/tipos" className="hover:bg-medio rounded-md p-2">
-                Tipos
+                Materiais
               </Link>
               <Link to="/cadastroTipo" className="hover:bg-medio rounded-md p-2">
-                Cadastrar tipo
+                Cadastrar Material
               </Link>
               <Link to="/sobre" className="hover:bg-medio rounded-md p-2">
                 Sobre

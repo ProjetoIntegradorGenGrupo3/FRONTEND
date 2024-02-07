@@ -6,6 +6,7 @@ import Postagem from '../../../models/Post';
 import { buscar } from '../../../service/Service';
 import CardPostagem from '../cardPostagem/CardPostagem';
 import './ListaPostagem.css';
+import { toastAlerta } from '../../../util/toastAlerta';
 
 function ListaPostagens() {
 
@@ -33,7 +34,7 @@ function ListaPostagens() {
       });
     } catch (error: any) {
       if (error.toString().includes('403')) {
-        alert('O token expirou, favor logar novamente');
+        toastAlerta('O token expirou, favor logar novamente', 'info');
         handleLogout();
       }
     } finally {

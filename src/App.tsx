@@ -16,15 +16,17 @@ import FormularioPostagem from "./Components/postagens/formularioPostagem/Formul
 import DeletarPostagem from "./Components/postagens/deletarPostagem/DeletarPostagem";
 import Footer from "./Components/Footer/footer";
 import Sidebar from "./Components/sideBar/SideBar";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 
 
 const App = () => {
   return (
     <AuthProvider>
-
+      <ToastContainer />
       <BrowserRouter>
-          <div className='min-h-[100vh]'>
+        <div className='min-h-[100vh]'>
           <Sidebar />
           <Routes>
             <Route path='/' element={<Login />} />

@@ -5,6 +5,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import Tipo from '../../../models/Tipo';
 import { buscar } from '../../../service/Service';
 import CardTipo from '../cardTipo/CardTipo';
+import { toastAlerta } from '../../../util/toastAlerta';
 
 function ListaTipo() {
 
@@ -26,7 +27,7 @@ function ListaTipo() {
         } catch (error: any) {
 
             if (error.toString().includes('403')) {                 
-                alert('O token expirou, favor logar novamente')     
+                toastAlerta('O token expirou, favor logar novamente','info')     
                 handleLogout()                                      
             }
 
@@ -36,7 +37,7 @@ function ListaTipo() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado')
+            toastAlerta('Você precisa estar logado','info')
             navigate('/login')
         }
     }, [token])

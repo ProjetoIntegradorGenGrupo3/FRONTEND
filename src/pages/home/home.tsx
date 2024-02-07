@@ -4,6 +4,11 @@ import './home.css';
 import ListaPostagens from '../../Components/postagens/listaPostagem/ListaPostagem';
 import ModalPostagem from '../../Components/postagens/modalPostagem/ModalPostagem';
 import homeContent from '../../assets/homeContent.svg';
+import wave from '../../assets/wave.svg';
+import wave2 from '../../assets/wave 2.svg';
+import Plantar from '../../assets/plantLogo.svg';
+
+
 
 
 
@@ -12,7 +17,7 @@ function Home() {
     <>
       {/* Bem Vindo! */}
       <div className="h-full bg-medio flex justify-center" style={{ fontFamily: "Montserrat, sans-serif" }}>
-        <div className='container grid grid-cols-2 text-escuro'>
+        <div className='container grid grid-cols-2 text-escuro mt-48'>
           <div className="flex flex-col gap-4 items-center justify-center py-4">
             <h1 className='text-5xl font-semibold items-center' style={{ fontFamily: "Poppins, sans-serif" }}>Seja bem vindo(a)! </h1>
             <h1 className='text-5xl font-semibold items-center' style={{ fontFamily: "Poppins, sans-serif" }}>Ecomunidade</h1>
@@ -32,13 +37,15 @@ function Home() {
           </div>
         </div>
       </div>
+      
+     
 
       {/* Sobre o Projeto */}
       <div>
         <div className="h-full bg-medio flex justify-center" style={{ fontFamily: "Montserrat, sans-serif" }}>
           <div className='container grid grid-cols-2 text-escuro mt-48'>
             <div className="flex justify-center m ">
-              <img src={homeContent} alt="" className='w-2/3' />
+              <img src={Plantar} alt="" className='w-3/3 mb-10' />
             </div>
             <div className="flex flex-col gap-4 items-center justify-center py-4">
               <h2 className='text-5xl font-semibold' style={{ fontFamily: "Poppins, sans-serif" }}>Sobre o Projeto</h2>
@@ -52,7 +59,10 @@ function Home() {
             </div>
           </div>
         </div>
+        <img src={wave} alt="" className='w-full bg-medio' />
       </div>
+
+      
 
        {/* Entre em Contato*/}
       <div className="text-gray-700 body-font relative mt-16">
@@ -130,6 +140,7 @@ function Home() {
             </div>
           </div>
         </div>
+        <img src={wave2} alt="" className='w-full bg-azmedio h-full' />
     </div>
       
 

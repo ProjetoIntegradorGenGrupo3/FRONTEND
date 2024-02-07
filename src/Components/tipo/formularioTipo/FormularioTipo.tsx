@@ -2,7 +2,7 @@ import { ChangeEvent, useContext, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import { atualizar, buscar, cadastrar } from '../../../service/Service'
-// import { toastAlerta } from '../../../util/toastAlerta';
+import { toastAlerta } from '../../../util/toastAlerta';
 import Tipo from '../../../models/Tipo';
 import { RotatingLines } from 'react-loader-spinner';
 
@@ -63,15 +63,15 @@ function FormularioTipo() {
                     }
                 })
 
-                alert('Tipo atualizado com sucesso')
+                toastAlerta('Material atualizado com sucesso','sucesso')
                 retornar()
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
-                    alert('O token expirou, favor logar novamente')
+                    toastAlerta('O token expirou, favor logar novamente','info')
                     handleLogout()
                 } else {
-                    alert('Erro ao atualizar o Tipo')
+                    toastAlerta('Erro ao atualizar o Material', 'erro')
                 }
             }
 
@@ -84,14 +84,14 @@ function FormularioTipo() {
                     }
                 })
 
-                alert('Tipo cadastrado com sucesso')
+                toastAlerta('Material cadastrado com sucesso','sucesso')
 
             } catch (error: any) {
                 if (error.toString().includes('403')) {
-                    alert('O token expirou, favor logar novamente')
+                    toastAlerta('O token expirou, favor logar novamente','info')
                     handleLogout()
                 } else {
-                    alert('Erro ao cadastrado o Tema')
+                    toastAlerta('Erro ao cadastrar Material','erro')
                 }
             }
         }
@@ -106,7 +106,7 @@ function FormularioTipo() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado');
+            toastAlerta('Você precisa estar logado','info');
             navigate('/login')
         }
     }, [token])
@@ -116,13 +116,13 @@ function FormularioTipo() {
             <h1 className="text-4xl text-center my-8">
 
 
-                {id === undefined ? 'Cadastre um novo tipo' : 'Editar tipo'}
+                {id === undefined ? 'Cadastrar Material' : 'Editar tipo'}
             </h1>
 
 
             <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovoTipo}>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="nome">Nome do tipo</label>
+                    <label htmlFor="nome">Nome do Material</label>
                     <input
                         type="text"
                         placeholder="Nome"
@@ -132,7 +132,7 @@ function FormularioTipo() {
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
                     <div className="flex flex-col gap-2">
-                        <label htmlFor="descricao">Descrição tipo</label>
+                        <label htmlFor="descricao">Descrição do Material</label>
                         <input
                             type="text"
                             placeholder="Descrição"
