@@ -6,15 +6,11 @@ import Matheus from '../../assets/matheus-avatar.webp';
 import Pedro from '../../assets/pedro-avatar.webp';
 import Talia from '../../assets/talia-avatar.webp';
 import Vini from '../../assets/vini-avatar.png';
-import wave from '../../assets/wave-haikei.svg';
 
 
 function Sobre() {
   return (
     <>
-    <div>
-    <img className="  h-full w-full mx-auto" src={wave} alt='Avatar da criadora Caroline' />
-    </div>
       <div className='text-escuro mt-10' style={{ fontFamily: "Montserrat, sans-serif" }}>
         <h1 className='flex justify-center text-4xl'style={{ fontFamily: "Poppins, sans-serif" }}>Equipe de Desenvolvimento</h1>
         <p className='flex justify-center text-2xl py-2'>
