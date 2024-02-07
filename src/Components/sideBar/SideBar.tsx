@@ -21,9 +21,8 @@ function Sidebar() {
     <>
       {usuario.token !== "" && (
         <div
-          className={`sidebar fixed top-0 left-0 h-screen border rounded-lg border-azmedio ${
-            isSidebarExtended ? "w-61 show" : "w-10"
-          } bg-azmedio text-claro`}
+          className={`sidebar fixed top-0 left-0 h-screen border rounded-lg border-azmedio ${isSidebarExtended ? "w-61 show" : "w-10"
+            } bg-azmedio text-claro`}
         >
           <div className="flex flex-col h-full">
             <button
@@ -42,15 +41,14 @@ function Sidebar() {
             </button>
 
             <div
-              className={`flex-1 flex flex-col gap-4 overflow-y-auto p-4 border-t border-claro ${
-                isSidebarExtended ? "" : "hidden"
-              }`}
+              className={`flex-1 flex flex-col gap-4 overflow-y-auto p-4 border-t border-claro ${isSidebarExtended ? "" : "hidden"
+                }`}
             >
               <Link to="/">
                 <img
                   src={logo}
                   alt="Ecomunidade"
-                  className="rounded-lg flex items-center justify-center h-16 w-full object-cover border-escuro"
+                  className="rounded-lg flex items-center justify-center h-10 w-full object-cover border-escuro"
                 />
               </Link>
               <Link to="/postagens" className="hover:bg-medio rounded-md p-2">
@@ -65,16 +63,15 @@ function Sidebar() {
               <Link to="/sobre" className="hover:bg-medio rounded-md p-2">
                 Sobre
               </Link>
+              <Link
+                to="/"
+                onClick={logout}
+                className="mt-auto flex items-center justify-start h-16 hover:bg-medio rounded-md">
+                Sair
+              </Link>
             </div>
 
-            
-            <Link
-              to="/"
-              onClick={logout}
-              className="mt-auto flex items-center justify-center h-16 text-lg hover:bg-medio rounded-md"
-            >
-              Sair
-            </Link>
+
           </div>
         </div>
       )}
