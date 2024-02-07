@@ -10,18 +10,14 @@ import { toastAlerta } from '../../../util/toastAlerta';
 
 function ListaPostagens() {
 
-  // Variavel de Estado de Postagens - Registra um Array que possuí Objetos da Model Postagem. Usada para armazena os dados que foram trazidos pela Service
   const [postagens, setPostagens] = useState<Postagem[]>([]);
   const [carregando, setCarregando] = useState(true);
 
-  // Criamos uma constante que recebe o hook useNavigate, para podermos redirecionar o usuário
   const navigate = useNavigate();
 
-  // Pega as informações que queremos do nosso Contexto através do hook useContexo
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
 
-  // Função que vai chamada a service de Buscar para buscarmos as Postagens
   async function buscarPostagens() {
 
     setCarregando(true);
@@ -42,9 +38,7 @@ function ListaPostagens() {
     }
   }
 
-  // Função de Efeito Colateral - Sempre que o array de Temas for carregado em tela, e o seu tamanho for acessado pelo React,
-  // uma função é disparada, chamando a função que irá fazer uma requisição ao back para carregar as Postagens em tela
-  useEffect(() => {
+ useEffect(() => {
     buscarPostagens();
   }, []);
 
