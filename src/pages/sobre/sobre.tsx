@@ -7,6 +7,7 @@ import Pedro from '../../assets/pedro-avatar.webp';
 import Talia from '../../assets/talia-avatar.webp';
 import Vini from '../../assets/vini-avatar.png';
 
+
 function Sobre() {
   return (
     <>
