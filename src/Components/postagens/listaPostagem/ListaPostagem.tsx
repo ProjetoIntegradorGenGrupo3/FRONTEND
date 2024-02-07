@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { Dna } from 'react-loader-spinner';
+import { MutatingDots } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Postagem from '../../../models/Post';
@@ -46,12 +46,16 @@ function ListaPostagens() {
     <div className="flex items-center justify-center min-h-screen">
       {carregando ? (
         <div className="text-center">
-          <Dna
-            visible={true}
-            height="200"
-            width="200"
-            ariaLabel="dna-loading"
-            wrapperClass="dna-wrapper"
+        <MutatingDots
+          visible={true}
+          height="100"
+          width="100"
+          color="#7CA081"
+          secondaryColor="#5D796F"
+          radius="12.5"
+          ariaLabel="mutating-dots-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
           />
         </div>
       ) : (

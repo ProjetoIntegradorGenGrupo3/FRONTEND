@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { Dna } from 'react-loader-spinner';
+import { MutatingDots } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Tipo from '../../../models/Tipo';
@@ -50,14 +50,17 @@ function ListaTipo() {
         <>
             {}
             {tipos.length === 0 && (
-                <Dna
-                    visible={true}
-                    height="200"
-                    width="200"
-                    ariaLabel="dna-loading"
-                    wrapperStyle={{}}
-                    wrapperClass="dna-wrapper mx-auto"
-                />
+                 <MutatingDots
+                 visible={true}
+                 height="100"
+                 width="100"
+                 color="#7CA081"
+                 secondaryColor="#5D796F"
+                 radius="12.5"
+                 ariaLabel="mutating-dots-loading"
+                 wrapperStyle={{}}
+                 wrapperClass=""
+                 />
             )}
 
             <div className="flex justify-center w-full my-4">

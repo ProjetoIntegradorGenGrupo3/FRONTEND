@@ -86,12 +86,12 @@ function DeletarTipo() {
             <p className='text-center font-semibold mb-4'>Você tem certeza de que deseja apagar o tipo a seguir?</p>
 
             <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
-                <header className='py-2 px-6 bg-green-600 text-white font-bold text-2xl'>Tipo</header>
-                <p className='p-8 text-3xl bg-slate-200 h-full'>{tipo.descricao}</p>
+                <header className='py-2 px-6 bg-escuro text-claro font-bold text-2xl'>Material</header>
+                <p className='p-8 text-3xl bg-medio h-full'>{tipo.descricao}</p>
                 <div className="flex">
-                    <button className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2' onClick={retornar}>Não</button>
+                    <button className='text-claro bg-escuro hover:bg-azclaro hover:text-escuro w-full py-2' onClick={retornar}>Não</button>
 
-                    <button className='w-full text-slate-100 bg-green-400 hover:bg-green-600 flex items-center justify-center' onClick={deletarTipo}>
+                    <button className='w-full text-claro bg-azmedio hover:bg-azclaro hover:text-escuro flex items-center justify-center' onClick={deletarTipo}>
                         {isLoading ?
                             <RotatingLines
                                 strokeColor="white"
