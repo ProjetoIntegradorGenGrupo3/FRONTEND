@@ -22,7 +22,7 @@ function CardPostagem({ post }: CardPostagemProps) {
 
     return (
    
-            <div className='border-claro shadow-xl border flex-col rounded overflow-hidden m-20 text-claro 'style={{ fontFamily: "Montserrat, sans-serif" }}>
+            <div className='border-claro shadow-xl border rounded-xl overflow-hidden mx-auto my-10 text-claro 'style={{ fontFamily: "Montserrat, sans-serif", maxWidth: "600px" }}>
                 <div className='bg-medio'>
                     <div className="flex w-full bg-escuro py-1 px-4 items-center gap-4">
                         <img src={post.usuario?.foto} className='h-12 rounded-full' alt="" />   
@@ -32,7 +32,7 @@ function CardPostagem({ post }: CardPostagemProps) {
                         <h4 className='text-lg font-semibold uppercase'>{post.localidade}</h4> 
                         <p>{post.conteudo}</p>
                         <p>Material: {post.tipo?.descricao}</p>
-                        <img src={post.foto} className='h-80 w-full' alt="foto do post" /> 
+                        <img src={post.foto} className='h-64 w-64 object-cover mx-auto mt-2 mb-2' alt="foto do post" /> 
                         <p>Data: {dataLocal}</p>
                     </div>
                 </div>

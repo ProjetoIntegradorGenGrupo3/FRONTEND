@@ -11,13 +11,13 @@ import Vini from '../../assets/vini-avatar.png';
 function Sobre() {
   return (
     <>
-      <div className='text-escuro ' style={{ fontFamily: "Montserrat, sans-serif" }}>
+      <div className='text-escuro mt-10' style={{ fontFamily: "Montserrat, sans-serif" }}>
         <h1 className='flex justify-center text-4xl'style={{ fontFamily: "Poppins, sans-serif" }}>Equipe de Desenvolvimento</h1>
         <p className='flex justify-center text-2xl py-2'>
           Conheça o time por trás do projeto!
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+      <div className="mb-10 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
         <div className="max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16 bg-medio shadow-xl rounded-lg text-escuro ">
           <div className="rounded-t-lg h-32 overflow-hidden">
           </div>
