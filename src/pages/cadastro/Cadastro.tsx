@@ -6,7 +6,7 @@ import './Cadastro.css'
 import { AuthContext } from '../../contexts/AuthContext'
 import { RotatingLines } from 'react-loader-spinner'
 import { toastAlerta } from '../../util/toastAlerta'
-
+import recicla from '../../assets/Cadastro.svg'
 function Cadastro() {
 
   
@@ -83,15 +83,21 @@ function Cadastro() {
 
     } else {
       toastAlerta('Dados inconsistentes. Verifique as informações de cadastro.','info')
-      setUsuario({ ...usuario, senha: "" }) // Reinicia o campo de Senha
-      setConfirmaSenha("")                  // Reinicia o campo de Confirmar Senha
+      setUsuario({ ...usuario, senha: "" }) 
+      setConfirmaSenha("")                  
     }
   }
 
   return (
     <>
+    
       <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-semibold "style={{ fontFamily: "Montserrat, sans-serif" }}>
-        <div className="fundoCadastro hidden lg:block"></div>
+        <div className="fundoCadastro hidden lg:block">
+        <div className="flex justify-center ">
+        <img src={recicla} alt="" className='w-4/5' />
+        </div>
+        </div>
+        
         <form className='flex justify-center items-center flex-col w-2/3 gap-3'onSubmit={cadastrarNovoUsuario}>
           <h2 className='text-escuro  text-5xl'style={{ fontFamily: "Poppins, sans-serif" }}>Cadastrar</h2>
           <div className="flex flex-col w-full">
@@ -104,9 +110,8 @@ function Cadastro() {
               className="border border-escuro bg-claro rounded p-2"
               value={usuario.nome}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-
-             
             />
+            
           </div>
           <div className="flex flex-col w-full">
             <label htmlFor="email">Email</label>
@@ -207,8 +212,10 @@ function Cadastro() {
                         /> :
                             <span>Cadastrar</span>}
                     </button>
+                    
           </div>
         </form>
+        
       </div>
     </>
   )
