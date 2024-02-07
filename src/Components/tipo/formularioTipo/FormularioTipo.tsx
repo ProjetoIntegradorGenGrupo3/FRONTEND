@@ -112,7 +112,7 @@ function FormularioTipo() {
     }, [token])
 
     return (
-        <div className="container flex flex-col items-center justify-center mx-auto">
+        <div className="container flex flex-col items-center justify-center mx-auto" style={{ fontFamily: "Poppins, sans-serif" }}>
             <h1 className="text-4xl text-center my-8">
 
 
@@ -145,7 +145,7 @@ function FormularioTipo() {
 
                 </div>
                 <button
-                    className="rounded text-slate-100 bg-green-400 hover:bg-green-800 w-1/2 py-2 mx-auto flex justify-center "
+                    className="rounded font-semibold text-escuro bg-azmedio hover:bg-escuro hover:text-claro w-1/2 py-2 mx-auto flex justify-center "
                     type="submit"
                 >
                     {isLoading ?

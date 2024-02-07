@@ -5,12 +5,15 @@ import Post from '../../../models/Post';
 import Tipo from '../../../models/Tipo';
 import { buscar, atualizar, cadastrar } from '../../../service/Service';
 import { toastAlerta } from '../../../util/toastAlerta';
+import { RotatingLines } from 'react-loader-spinner';
 
 
 function FormularioPostagem() {
   let navigate = useNavigate();
 
   const { id } = useParams<{ id: string }>();
+
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
@@ -21,7 +24,7 @@ function FormularioPostagem() {
     id: 0,
     nome: '',
     descricao: '',
-    data:'',
+    data: '',
   });
 
   const [post, setPost] = useState<Post>({
@@ -96,6 +99,7 @@ function FormularioPostagem() {
 
   async function gerarNovaPostagem(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
+    setIsLoading(true)
 
     console.log({ post });
 
@@ -135,9 +139,8 @@ function FormularioPostagem() {
         }
       }
     }
+    setIsLoading(false)
   }
-
-  console.log(post)
 
 
   const carregandoTema = tipo.descricao === '';
@@ -194,8 +197,16 @@ function FormularioPostagem() {
             ))}
           </select>
         </div>
-        <button disabled={carregandoTema} type='submit' className='rounded disabled:bg-slate-200 bg-green-400 hover:bg-green-800 text-white font-bold w-1/2 mx-auto block py-2'>
-          {carregandoTema ? <span>Carregando</span> : id !== undefined ? 'Editar' : 'Cadastrar'}
+        <button disabled={carregandoTema} type='submit' className='rounded disabled:bg-slate-200 bg-green-400 hover:bg-green-800 text-white font-bold w-1/2 mx-auto block py-2 flex justify-center'>
+          {carregandoTema || isLoading ?
+
+            <RotatingLines
+              strokeColor="white"
+              strokeWidth="5"
+              animationDuration="0.75"
+              width="24"
+              visible={true}
+            /> : id !== undefined ? 'Editar' : 'Cadastrar'}
         </button>
       </form>
     </div>
