@@ -21,7 +21,7 @@ function Home() {
           <div className="flex flex-col gap-4 items-center justify-center py-4">
             <h1 className='text-5xl font-semibold items-center' style={{ fontFamily: "Poppins, sans-serif" }}>Seja bem vindo(a)! </h1>
             <h1 className='text-5xl font-semibold items-center' style={{ fontFamily: "Poppins, sans-serif" }}>Ecomunidade</h1>
-            <h3 className='text-2xl font-semibold items-center' style={{ fontFamily: "Poppins, sans-serif" }}>Amigos do Planete e Sustentabilidade!</h3>
+            <h3 className='text-2xl font-semibold items-center' style={{ fontFamily: "Poppins, sans-serif" }}>Amigos do Planeta e Sustentabilidade!</h3>
 
             <div className="flex justify-around gap-4 font-none">
               <ModalPostagem />
@@ -49,7 +49,7 @@ function Home() {
             </div>
             <div className="flex flex-col gap-4 items-center justify-center py-4">
               <h2 className='text-5xl font-semibold' style={{ fontFamily: "Poppins, sans-serif" }}>Sobre o Projeto</h2>
-              <p className='text-xl'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi eos vero ad temporibus consequuntur quae veniam, aperiam provident accusantium sit tempore eum id tenetur aspernatur ducimus? Natus fugiat repellendus dolor! Lorem ipsum dolor, sit amet consectetur adipisicing elit. In vero et porro? Facere, iste ipsam. Iusto debitis architecto quis, magni necessitatibus soluta impedit quaerat omnis doloremque saepe, provident ducimus illum?</p>
+              <p className='text-xl'>A solução que propomos é a Ecomunidade, uma rede social que conecta doadores ou fornecedores de materiais recicláveis com transformadores. Esta plataforma permite a criação de perfis para doadores, fornecedores, transformadores e colhedores de materiais recicláveis. Acreditamos que a Ecomunidade pode funcionar como um facilitador nesse processo, além de servir como uma vitrine para as causas individuais dos projetos. A Ecomunidade representa nossa contribuição para a luta contra a mudança climática.</p>
 
               <div className="flex justify-around gap-4 font-none">
                 <button className='rounded font-none bg-escuro text-claro hover:bg-azmedio hover:text-escuro py-2 px-4 mb-50'>
