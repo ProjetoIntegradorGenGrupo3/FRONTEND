@@ -22,7 +22,7 @@ function CardPostagem({ post }: CardPostagemProps) {
 
     return (
    
-            <div className='border-claro shadow-xl border rounded-xl overflow-hidden mx-auto my-10 text-claro 'style={{ fontFamily: "Montserrat, sans-serif", maxWidth: "600px" }}>
+            <div className='border-claro shadow-xl border rounded-xl overflow-hidden mx-auto my-10 text-claro 'style={{ fontFamily: "Montserrat, sans-serif", maxWidth: "420px", maxHeight:"900px" }}>
                 <div className='bg-medio'>
                     <div className="flex w-full bg-escuro py-1 px-4 items-center gap-4">
                         <img src={post.usuario?.foto} className='h-12 rounded-full' alt="" />   
