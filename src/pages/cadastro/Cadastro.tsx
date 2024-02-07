@@ -7,6 +7,7 @@ import { AuthContext } from '../../contexts/AuthContext'
 import { RotatingLines } from 'react-loader-spinner'
 import { toastAlerta } from '../../util/toastAlerta'
 import recicla from '../../assets/Cadastro.svg'
+
 function Cadastro() {
 
   
@@ -94,7 +95,7 @@ function Cadastro() {
       <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-semibold "style={{ fontFamily: "Montserrat, sans-serif" }}>
         <div className="fundoCadastro hidden lg:block">
         <div className="flex justify-center ">
-        <img src={recicla} alt="" className='w-4/5' />
+        <img src={recicla} alt="" className='w-4/5 mt-36' />
         </div>
         </div>
         
