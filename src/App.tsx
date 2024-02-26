@@ -18,6 +18,7 @@ import Footer from "./Components/Footer/footer";
 import Sidebar from "./Components/sideBar/SideBar";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import Perfil from "./pages/perfil/Perfil";
 
 
 
@@ -42,6 +43,7 @@ const App = () => {
             <Route path="/cadastroPostagem" element={<FormularioPostagem />} />
             <Route path="/editarPostagem/:id" element={<FormularioPostagem />} />
             <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
+            <Route path="/perfil" element={<Perfil />} />
 
 
           </Routes>
