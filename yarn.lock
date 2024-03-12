@@ -579,10 +579,10 @@
     "@react-spring/shared" "~9.7.3"
     "@react-spring/types" "~9.7.3"
 
-"@remix-run/router@1.15.0":
-  version "1.15.0"
-  resolved "https://registry.npmjs.org/@remix-run/router/-/router-1.15.0.tgz"
-  integrity sha512-HOil5aFtme37dVQTB6M34G95kPM3MMuqSmIRVCC52eKV+Y/tGSqw9P3rWhlAx6A+mz+MoX+XxsGsNJbaI5qCgQ==
+"@remix-run/router@1.15.3":
+  version "1.15.3"
+  resolved "https://registry.npmjs.org/@remix-run/router/-/router-1.15.3.tgz"
+  integrity sha512-Oy8rmScVrVxWZVOpEF57ovlnhpZ8CCPlnIIumVcV9nFdiSIrus99+Lw78ekXyGvVDlIsFJbSfmSovJUhCWYV3w==
 
 "@rollup/rollup-android-arm-eabi@4.9.6":
   version "4.9.6"
@@ -1081,7 +1081,7 @@ concat-map@0.0.1:
 
 convert-source-map@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-2.0.0.tgz#4b560f649fc4e918dd0ab75cf4961e8bc882d82a"
+  resolved "https://registry.npmjs.org/convert-source-map/-/convert-source-map-2.0.0.tgz"
   integrity sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==
 
 cross-spawn@^7.0.0, cross-spawn@^7.0.2:
@@ -1435,7 +1435,7 @@ function-bind@^1.1.2:
 
 gensync@^1.0.0-beta.2:
   version "1.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/gensync/-/gensync-1.0.0-beta.2.tgz#32a6ee76c3d7f52d46b2b1ae5d93fea8580a25e0"
+  resolved "https://registry.npmjs.org/gensync/-/gensync-1.0.0-beta.2.tgz"
   integrity sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==
 
 glob-parent@^5.1.2, glob-parent@~5.1.2:
@@ -1633,7 +1633,7 @@ js-yaml@^4.1.0:
 
 jsesc@^2.5.1:
   version "2.5.2"
-  resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-2.5.2.tgz#80564d2e483dacf6e8ef209650a67df3f0c283a4"
+  resolved "https://registry.npmjs.org/jsesc/-/jsesc-2.5.2.tgz"
   integrity sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==
 
 json-buffer@3.0.1:
@@ -1653,7 +1653,7 @@ json-stable-stringify-without-jsonify@^1.0.1:
 
 json5@^2.2.3:
   version "2.2.3"
-  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
+  resolved "https://registry.npmjs.org/json5/-/json5-2.2.3.tgz"
   integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
 keyv@^4.5.3:
@@ -2025,20 +2025,20 @@ react-refresh@^0.14.0:
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.14.0.tgz"
   integrity sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==
 
-react-router-dom@^6.22.0:
-  version "6.22.0"
-  resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.22.0.tgz"
-  integrity sha512-z2w+M4tH5wlcLmH3BMMOMdrtrJ9T3oJJNsAlBJbwk+8Syxd5WFJ7J5dxMEW0/GEXD1BBis4uXRrNIz3mORr0ag==
+react-router-dom@^6.22.3:
+  version "6.22.3"
+  resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.22.3.tgz"
+  integrity sha512-7ZILI7HjcE+p31oQvwbokjk6OA/bnFxrhJ19n82Ex9Ph8fNAq+Hm/7KchpMGlTgWhUxRHMMCut+vEtNpWpowKw==
   dependencies:
-    "@remix-run/router" "1.15.0"
-    react-router "6.22.0"
+    "@remix-run/router" "1.15.3"
+    react-router "6.22.3"
 
-react-router@6.22.0:
-  version "6.22.0"
-  resolved "https://registry.npmjs.org/react-router/-/react-router-6.22.0.tgz"
-  integrity sha512-q2yemJeg6gw/YixRlRnVx6IRJWZD6fonnfZhN1JIOhV2iJCPeRNSH3V1ISwHf+JWcESzLC3BOLD1T07tmO5dmg==
+react-router@6.22.3:
+  version "6.22.3"
+  resolved "https://registry.npmjs.org/react-router/-/react-router-6.22.3.tgz"
+  integrity sha512-dr2eb3Mj5zK2YISHK++foM9w4eBnO23eKnZEDs7c880P6oKbrjz/Svg9+nxqtHQK+oMW4OtjZca0RqPglXxguQ==
   dependencies:
-    "@remix-run/router" "1.15.0"
+    "@remix-run/router" "1.15.3"
 
 react-spring@^9.7.3:
   version "9.7.3"
@@ -2330,7 +2330,7 @@ thenify-all@^1.0.0:
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
+  resolved "https://registry.npmjs.org/to-fast-properties/-/to-fast-properties-2.0.0.tgz"
   integrity sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==
 
 to-regex-range@^5.0.1:

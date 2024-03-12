@@ -20,7 +20,7 @@ function Sobre() {
       <div className="mb-10 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
         <div className="max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16 bg-medio shadow-xl rounded-lg text-escuro ">
           <div className="rounded-t-lg h-32 overflow-hidden">
-          </div>z
+          </div>
           <div className="mx-auto relative -mt-16  overflow-hidden">
             <img className="object-cover object-center h-64 mx-auto" src={Carol} alt='Avatar da criadora Caroline' />
           </div>
