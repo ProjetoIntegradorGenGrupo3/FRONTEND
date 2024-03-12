@@ -62,6 +62,9 @@ function Sidebar() {
               <Link to="/cadastroTipo" className="hover:bg-medio rounded-md p-2">
                 Cadastrar Material
               </Link>
+              <Link to="/perfil" className="hover:bg-medio rounded-md p-2">
+                Perfil
+              </Link>
               <Link to="/sobre" className="hover:bg-medio rounded-md p-2">
                 Equipe
               </Link>
