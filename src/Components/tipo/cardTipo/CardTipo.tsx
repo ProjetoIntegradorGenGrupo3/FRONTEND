@@ -9,7 +9,7 @@ function CardTipo({ tipo }: CardTipoProps) {
   return (
     <div className="border flex flex-col rounded-2xl overflow-hidden justify-between">
       <header className="py-2 px-6 bg-escuro text-claro font-bold text-2xl">
-        Material
+        <p >{tipo.nome}</p>
       </header>
 
       <p className="p-8 text-3xl bg- h-full bg-medio">{tipo.descricao}</p>
