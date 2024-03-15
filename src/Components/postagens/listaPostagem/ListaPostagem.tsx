@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { MutatingDots } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
@@ -8,20 +8,21 @@ import CardPostagem from '../cardPostagem/CardPostagem';
 import './ListaPostagem.css';
 import { toastAlerta } from '../../../util/toastAlerta';
 
-function ListaPostagens() {
+interface ListaPostagemProps {
+  searchTerm: string; // Defina o tipo de searchTerm
+}
 
+function ListaPostagem({ searchTerm }: ListaPostagemProps) {
   const [postagens, setPostagens] = useState<Postagem[]>([]);
   const [carregando, setCarregando] = useState(true);
+  const [termoPesquisa, setTermoPesquisa] = useState('');
 
   const navigate = useNavigate();
-
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
 
   async function buscarPostagens() {
-
     setCarregando(true);
-
     try {
       await buscar('/postagens', setPostagens, {
         headers: {
@@ -38,36 +39,54 @@ function ListaPostagens() {
     }
   }
 
- useEffect(() => {
+  useEffect(() => {
     buscarPostagens();
   }, []);
 
+  // Função para atualizar o estado de termoPesquisa
+  const handlePesquisaChange = (event) => {
+    setTermoPesquisa(event.target.value);
+  };
+
+  // Filtrar postagens com base no termo de pesquisa
+  const postagensFiltradas = postagens.filter((postagem) =>
+    postagem.conteudo.toLowerCase().includes(termoPesquisa.toLowerCase())
+  );
+
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <div className="w-full max-w-md mb-4 ">
+        <input
+          type="text"
+          placeholder="Pesquisar postagens..."
+          value={termoPesquisa}
+          onChange={handlePesquisaChange}
+          className="w-full border border-medio rounded px-4 py-2"
+        />
+      </div>
       {carregando ? (
         <div className="text-center">
-        <MutatingDots
-          visible={true}
-          height="100"
-          width="100"
-          color="#7CA081"
-          secondaryColor="#5D796F"
-          radius="12.5"
-          ariaLabel="mutating-dots-loading"
-          wrapperStyle={{}}
-          wrapperClass=""
+          <MutatingDots
+            visible={true}
+            height="100"
+            width="100"
+            color="#7CA081"
+            secondaryColor="#5D796F"
+            radius="12.5"
+            ariaLabel="mutating-dots-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
           />
         </div>
       ) : (
-        <div className="container mx-auto my-4 grid grid-cols-1 lg:grid-cols-1 gap-20">
-          {postagens.map((postagem) => (
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-1 gap-20">
+          {postagensFiltradas.map((postagem) => (
             <CardPostagem key={postagem.id} post={postagem} />
           ))}
         </div>
       )}
     </div>
   );
-  
 }
 
-export default ListaPostagens;
+export default ListaPostagem;

@@ -19,6 +19,7 @@ import Sidebar from "./Components/sideBar/SideBar";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import Perfil from "./pages/perfil/Perfil";
+import Postagem from "./pages/postagem/Postagem";
 
 
 
@@ -39,7 +40,7 @@ const App = () => {
             <Route path="/editarTipo/:id" element={<FormularioTipo />} />
             <Route path="/deletarTipo/:id" element={<DeletarTipo />} />
             <Route path="/tipos" element={<ListaTipo />} />
-            <Route path="/postagens" element={<ListaPostagens />} />
+            <Route path="/postagens" element={<Postagem />} />
             <Route path="/cadastroPostagem" element={<FormularioPostagem />} />
             <Route path="/editarPostagem/:id" element={<FormularioPostagem />} />
             <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
