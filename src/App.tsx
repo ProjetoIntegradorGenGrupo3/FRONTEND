@@ -20,7 +20,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import Perfil from "./pages/perfil/Perfil";
 import Postagem from "./pages/postagem/Postagem";
-import Referencias from "./pages/referencias/referencias";
+import Referencias from "./pages/referencias/Referencias";
 
 
 
