@@ -31,8 +31,11 @@ function Referencias() {
           </div>
         </div>
       </div>
+      <div>
+        <img src={wave} alt="" className='w-full bg-azescuro' />
+      </div>
 
-      <div className="h-full bg-azescuro flex justify-center" style={{ fontFamily: "Montserrat, sans-serif" }}>
+      <div className="h-full bg-medio flex justify-center" style={{ fontFamily: "Montserrat, sans-serif" }}>
         <div className='container grid grid-cols-2 text-white mt-48 ml-48'>
           <div className="flex justify-center items-center ">
             <img src={madc} alt="" className='w-[9000px]' />
@@ -52,7 +55,7 @@ function Referencias() {
         </div>
       </div>
 
-      <div className="h-full bg-azescuro flex justify-center" style={{ fontFamily: "Montserrat, sans-serif" }}>
+      <div className="h-full bg-medio flex justify-center" style={{ fontFamily: "Montserrat, sans-serif" }}>
         <div className='container grid grid-cols-2 text-white mt-48 ml-48'>
           <div className="flex flex-col gap-4 items-center justify-center py-4 mr-48">
             <h2 className='text-5xl font-semibold' style={{ fontFamily: "Poppins, sans-serif" }}>Why And How To Create a Sustainable Website?</h2>
@@ -68,7 +71,7 @@ function Referencias() {
         </div>
       </div>
 
-      <div className="h-full bg-azescuro flex justify-center" style={{ fontFamily: "Montserrat, sans-serif" }}>
+      <div className="h-full bg-medio flex justify-center" style={{ fontFamily: "Montserrat, sans-serif" }}>
         <div className='container grid grid-cols-2 text-white mt-48 ml-48'>
           <div className="flex justify-center items-center ">
             <img src={solartech} alt="" className='w-[9000px]' />
@@ -92,7 +95,7 @@ function Referencias() {
       </div>
 
       <div>
-        <img src={wave} alt="" className='w-full bg-azescuro' />
+        <img src={wave} alt="" className='w-full bg-medio' />
       </div>
 
     </>
