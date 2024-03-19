@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import "./SideBar.css";
 import { toastAlerta } from "../../util/toastAlerta";
+import { IoChevronBackCircleOutline } from "react-icons/io5";
 
 function Sidebar() {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ function Sidebar() {
               onClick={() => setIsSidebarExtended(!isSidebarExtended)}
             >
               {isSidebarExtended ? (
-                <span className="text-lg mx-6 my-5  hover:underline"> Voltar</span>
+                <span><IoChevronBackCircleOutline className="h-6 w-6 my-2 mx-2"  /></span>
               ) : (
                 <img
                   src={rightArrowIcon}
@@ -67,6 +68,9 @@ function Sidebar() {
               </Link>
               <Link to="/sobre" className="hover:bg-medio rounded-md p-2">
                 Equipe
+              </Link>
+              <Link to="/referencias" className="hover:bg-medio rounded-md p-2">
+                Referencias
               </Link>
               <Link
                 to="/"

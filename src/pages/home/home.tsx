@@ -32,7 +32,7 @@ function Home() {
           </div>
 
           <div className="flex justify-center ">
-            <img src={homeLogo} alt="" className='w-2/3' />
+            <img src={homeLogo} alt="" className='w-2/3' />  
 
           </div>
         </div>
@@ -53,8 +53,10 @@ function Home() {
 
               <div className="flex justify-around gap-4 font-none">
                 <button className='rounded font-none bg-escuro text-claro hover:bg-azmedio hover:text-escuro py-2 px-4 mb-50'>
-                  <Link to="/sobre">Sobre nós</Link>
+                  <Link to="/sobre">Equipe</Link>
                 </button>
+                <button className='rounded font-none bg-claro text-escuro hover:bg-azmedio hover:text-claro py-2 px-4'>
+                <Link to="/referencias">Ver Referencias</Link></button>
               </div>
             </div>
           </div>

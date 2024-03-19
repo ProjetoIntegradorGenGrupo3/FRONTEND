@@ -12,6 +12,7 @@ module.exports = {
         claro:'#CAEECF',
         azclaro:'#9BC8B8',
         azmedio:'#5D796F',
+        azescuro:'#0A0C7A'
       },
     },
   },

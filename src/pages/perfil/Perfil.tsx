@@ -1,8 +1,12 @@
 import React, { useContext, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
 import loginLogo from '../../assets/Login.svg'
 import { toastAlerta } from '../../util/toastAlerta'
+import { CgProfile } from 'react-icons/cg'
+import { FaRegEdit, FaRegNewspaper } from 'react-icons/fa'
+import { IoMdSend } from 'react-icons/io'
+import { CiEdit } from 'react-icons/ci'
 
 function Perfil() {
     let navigate = useNavigate()
@@ -17,76 +21,69 @@ function Perfil() {
     }, [usuario.token])
 
     return (
-        <div className="container mx-auto p-16"> {/* Centraliza o conteúdo principal */}
-            <div className="flex flex-col items-center"> {/* Centraliza verticalmente */}
-                <div className="flex items-center justify-center flex-wrap"> {/* Centraliza horizontalmente e ajusta para tela cheia */}
-                    <div className="flex-shrink-0"> {/* Evita que a imagem diminua */}
-                        <img
-                            src={usuario.foto}
-                            className="rounded-full w-40 h-40 items-center"
-                            alt="Foto de perfil do usuário"
-                        />
-                    </div>
-                    <div className="ml-4 flex-grow"> {/* Ajusta a largura do conteúdo à direita da imagem */}
-                        <div className="text-2xl font-bold mb-2">{usuario.nome}</div>
-                        <div className="text-gray-600 mb-4">
-                            {usuario.bio}
-                        </div>
-
-                        <div className="flex flex-wrap justify-between w-full">
-                            <div className="flex flex-col items-center justify-center w-1/2 mb-4">
-                                <div className="text-xl font-bold mb-2">1598</div>
-                                <div className="text-gray-600">Seguidores</div>
-                            </div>
-                            <div className="flex flex-col items-center justify-center w-1/2 mb-4">
-                                <div className="text-xl font-bold mb-2">65</div>
-                                <div className="text-gray-600">Seguindo</div>
-                            </div>
-                            <div className="flex flex-col items-center justify-center w-1/2 mb-4">
-                                <div className="text-xl font-bold mb-2">123</div>
-                                <div className="text-gray-600">Artigos</div>
-                            </div>
-                            <div className="flex flex-col items-center justify-center w-1/2 mb-4">
-                                <div className="text-xl font-bold mb-2">85</div>
-                                <div className="text-gray-600">Trabalhos</div>
-                            </div>
-                        </div>
-
-                        <div className="flex justify-center mb-4">
-                            <a
-                                href="https://www.facebook.com/iaMuhammedErdem"
-                                className="mr-4"
-                                target="_blank"
-                            >
-                                <svg className="w-6 h-6 fill-current text-gray-600 hover:text-blue-500">
-                                    <use xlinkHref="#facebook" />
-                                </svg>
-                            </a>
-                            <a
-                                href="http://muhammederdem.com.tr/"
-                                target="_blank"
-                            >
-                                <svg className="w-6 h-6 fill-current text-gray-600 hover:text-blue-500">
-                                    <use xlinkHref="#website" />
-                                </svg>
-                            </a>
-                        </div>
-
-                        <div className="flex justify-center">
-                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">
-                                Enviar mensagem
-                            </button>
-                            <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                                Seguir
-                            </button>
-                        </div>
-
-                        <div className="mt-4">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        // miniatura perfil
+        <><div className='mt-16 ml-16 mb-5 flex bg-medio w-96 p-3 rounded-lg ' style={{ fontFamily: "Poppins, sans-serif" }}>
+            <img src={usuario.foto} alt={`Foto de perfil de ${usuario.nome}`} className='rounded-full size-16' />
+            <header className='ml-5'>
+                Olá,<br></br><b>{usuario.nome}</b>
+            </header>
         </div>
+
+            {/* miniatura links externos */}
+            <div className='bg-medio w-96 p-3 ml-16 rounded-lg' style={{ fontFamily: "Poppins, sans-serif" }}>
+
+                <Link to='' className='ml-4 flex text-[#2A3326]'><CgProfile className='text-[#CAEECF] size-6 mr-2' />Minha conta</Link>
+
+                <hr className='my-4'></hr>
+
+                <Link to='' className='ml-4 flex text-[#2A3326]'><FaRegNewspaper className='text-[#CAEECF] size-6 mr-2' />Minhas Postagens</Link>
+
+                <hr className='my-4'></hr>
+
+                <Link to='' className='ml-4 flex text-[#2A3326]'><IoMdSend className='text-[#CAEECF] size-6 mr-2' />Mensagens</Link>
+
+                <hr className='my-4'></hr>
+
+                <Link to='' className='ml-4 flex text-[#2A3326] '><CiEdit className='text-[#CAEECF] size-6 mr-2' />Editar Perfil</Link>
+
+                <hr className='my-4'></hr>
+
+
+            </div>
+
+            {/* Card de informações */}
+            <div className='bg-medio w-[65%] p-3 mt-[-344px] ml-[31%] rounded-lg'>
+                <header className='text-center text-xl mb-4'>
+                    <b>Infomações Pessoais</b>
+                </header>
+                <hr></hr>
+
+                <section className='p-10' style={{ fontFamily: "Poppins, sans-serif" }}>
+                    <div className='my-4 '>
+                        <img src={usuario.foto} alt='Foto de Perfil' className='rounded-full size-32' />
+                    </div>
+
+                    <div className='my-4'>
+                        <p className='mb-2 text-lg '>Nome: </p>
+                        <p className='bg-[#2A3326] ml-1 w-96 h-8 rounded-full text-xl text-claro text-center ' >{usuario.nome}</p>
+                    </div>
+
+                    <div className='w-[100%]'>
+                        <p className='mb-2 text-lg'>Email: </p>
+                        <p className='bg-[#2A3326] ml-1 w-96 h-8 rounded-full text-xl text-claro text-center'>{usuario.email}</p>
+                    </div>
+
+                    <div className='my-4'>
+                        <p className='mb-2 text-lg'>Data de Nascimento: </p>
+                        <p className='bg-[#2A3326] ml-1 w-96 h-8 rounded-full text-xl text-claro text-center'>{usuario.data_nascimento}</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </>
+
     )
 }
 

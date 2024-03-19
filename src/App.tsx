@@ -20,6 +20,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import Perfil from "./pages/perfil/Perfil";
 import Postagem from "./pages/postagem/Postagem";
+import Referencias from "./pages/referencias/referencias";
 
 
 
@@ -45,6 +46,7 @@ const App = () => {
             <Route path="/editarPostagem/:id" element={<FormularioPostagem />} />
             <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
             <Route path="/perfil" element={<Perfil />} />
+            <Route path="/referencias" element={<Referencias />} />
 
 
           </Routes>
