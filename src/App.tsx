@@ -24,7 +24,7 @@ import Referencias from "./pages/referencias/referencias";
 
 
 
-const App = () => {
+function App() {
   return (
     <AuthProvider>
       <ToastContainer />
